@@ -1,0 +1,90 @@
+---
+import LucideIcon from './icons/LucideIcon';
+---
+
+<section id="servicios" class="py-20 lg:py-32 bg-white">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<!-- Section Header -->
+		<div class="text-center mb-16 lg:mb-20 section-header">
+			<div class="inline-flex items-center space-x-3 px-5 py-2.5 bg-[var(--color-surface-200)] rounded-full text-[var(--color-primary)] font-medium mb-10">
+				<LucideIcon name="Stethoscope" class="w-2.5 h-2.5 flex-shrink-0" client:load />
+				<span class="text-sm">Nuestros Servicios</span>
+			</div>
+			<h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--color-text-heading)] mb-6">
+				Servicios médicos veterinarios
+			</h2>
+			<p class="text-xl text-[var(--color-text-secondary)] max-w-3xl mx-auto leading-relaxed">
+				Ofrecemos una atención integral y especializada para el cuidado de la salud de tu mascota, con tecnología avanzada y un equipo de profesionales altamente capacitados.
+			</p>
+		</div>
+
+		<!-- Services Grid -->
+		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+			<!-- Service Card 1 -->
+			<div class="group bg-white rounded-[var(--radius-card)] p-8 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 hover:-translate-y-1 border border-[var(--border-subtle-color)] service-card">
+				<div class="w-14 h-14 bg-white border-2 border-[var(--color-primary)] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-[var(--shadow-soft)]">
+					<LucideIcon name="Stethoscope" class="w-7 h-7 text-[var(--color-primary)]" client:load />
+				</div>
+				<h3 class="text-2xl font-bold text-[var(--color-text-heading)] mb-3">Consultas Médicas</h3>
+				<p class="text-[var(--color-text-secondary)] leading-relaxed">
+					Exámenes clínicos completos, diagnósticos precisos y planes de tratamiento personalizados para mantener la salud óptima de tu mascota.
+				</p>
+			</div>
+
+			<!-- Service Card 2 -->
+			<div class="group bg-white rounded-[var(--radius-card)] p-8 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 hover:-translate-y-1 border border-[var(--border-subtle-color)] service-card">
+				<div class="w-14 h-14 bg-white border-2 border-[var(--color-primary)] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-[var(--shadow-soft)]">
+					<LucideIcon name="Syringe" class="w-7 h-7 text-[var(--color-primary)]" client:load />
+				</div>
+				<h3 class="text-2xl font-bold text-[var(--color-text-heading)] mb-3">Vacunación</h3>
+				<p class="text-[var(--color-text-secondary)] leading-relaxed">
+					Programas de vacunación completos y actualizados según protocolos internacionales para prevenir enfermedades infecciosas.
+				</p>
+			</div>
+
+			<!-- Service Card 3 -->
+			<div class="group bg-white rounded-[var(--radius-card)] p-8 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 hover:-translate-y-1 border border-[var(--border-subtle-color)] service-card">
+				<div class="w-14 h-14 bg-white border-2 border-[var(--color-primary)] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-[var(--shadow-soft)]">
+					<LucideIcon name="Heart" class="w-7 h-7 text-[var(--color-primary)]" client:load />
+				</div>
+				<h3 class="text-2xl font-bold text-[var(--color-text-heading)] mb-3">Cardiología</h3>
+				<p class="text-[var(--color-text-secondary)] leading-relaxed">
+					Diagnóstico y tratamiento especializado de enfermedades cardiovasculares con equipos de ecocardiografía y electrocardiografía.
+				</p>
+			</div>
+
+			<!-- Service Card 4 -->
+			<div class="group bg-white rounded-[var(--radius-card)] p-8 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 hover:-translate-y-1 border border-[var(--border-subtle-color)] service-card">
+				<div class="w-14 h-14 bg-white border-2 border-[var(--color-primary)] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-[var(--shadow-soft)]">
+					<LucideIcon name="Scissors" class="w-7 h-7 text-[var(--color-primary)]" client:load />
+				</div>
+				<h3 class="text-2xl font-bold text-[var(--color-text-heading)] mb-3">Estética y Grooming</h3>
+				<p class="text-[var(--color-text-secondary)] leading-relaxed">
+					Servicios profesionales de peluquería y estética canina y felina para mantener a tu mascota limpia, sana y hermosa.
+				</p>
+			</div>
+
+			<!-- Service Card 5 -->
+			<div class="group bg-white rounded-[var(--radius-card)] p-8 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 hover:-translate-y-1 border border-[var(--border-subtle-color)] service-card">
+				<div class="w-14 h-14 bg-white border-2 border-[var(--color-primary)] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-[var(--shadow-soft)]">
+					<LucideIcon name="Shield" class="w-7 h-7 text-[var(--color-primary)]" client:load />
+				</div>
+				<h3 class="text-2xl font-bold text-[var(--color-text-heading)] mb-3">Cirugía</h3>
+				<p class="text-[var(--color-text-secondary)] leading-relaxed">
+					Quirófanos completamente equipados para procedimientos quirúrgicos con los más altos estándares de seguridad y asepsia.
+				</p>
+			</div>
+
+			<!-- Service Card 6 -->
+			<div class="group bg-white rounded-[var(--radius-card)] p-8 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 hover:-translate-y-1 border border-[var(--border-subtle-color)] service-card">
+				<div class="w-14 h-14 bg-white border-2 border-[var(--color-primary)] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-[var(--shadow-soft)]">
+					<LucideIcon name="PhoneCall" class="w-7 h-7 text-[var(--color-primary)]" client:load />
+				</div>
+				<h3 class="text-2xl font-bold text-[var(--color-text-heading)] mb-3">Urgencias 24/7</h3>
+				<p class="text-[var(--color-text-secondary)] leading-relaxed">
+					Atención de emergencias médicas veterinarias las 24 horas del día, todos los días del año, para cuando más lo necesites.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>

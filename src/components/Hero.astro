@@ -1,0 +1,101 @@
+---
+import LucideIcon from './icons/LucideIcon';
+import { APP_URLS } from '../config/env';
+---
+
+<section id="inicio" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-gradient-to-br from-[var(--color-base)] via-white to-[var(--color-surface-200)]">
+	<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+		<div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+			<!-- Left Column: Content -->
+			<div class="text-center lg:text-left space-y-8 hero-content">
+				<div class="inline-flex items-center space-x-3 px-5 py-2.5 bg-[var(--color-surface-200)] rounded-full text-[var(--color-primary)] font-medium mb-8">
+					<LucideIcon name="Heart" class="w-2.5 h-2.5 flex-shrink-0" client:load />
+					<span class="text-sm">Más de 10 años cuidando a tus mascotas</span>
+				</div>
+
+				<h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-[var(--color-text-heading)] leading-tight hero-title">
+					Cuidado veterinario
+					<span class="text-[var(--color-primary)] block">profesional y humano</span>
+				</h1>
+
+				<p class="text-lg md:text-xl text-[var(--color-text-secondary)] max-w-2xl mx-auto lg:mx-0 leading-relaxed hero-description">
+					Ofrecemos servicios médicos veterinarios de excelencia con equipamiento de última generación y un equipo de profesionales comprometidos con el bienestar de tu mascota.
+				</p>
+
+				<div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+					<a
+						href={APP_URLS.AGENDAR_CONSULTA}
+						class="group inline-flex items-center justify-center px-6 py-3 bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white rounded-xl font-semibold text-base transition-all duration-300 shadow-[var(--shadow-primary)] hover:shadow-[var(--shadow-hard)] hover:scale-105 hero-cta"
+					>
+						Agendar Consulta
+						<LucideIcon name="ArrowRight" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" client:load />
+					</a>
+					<a
+						href="#servicios"
+						class="inline-flex items-center justify-center px-6 py-3 bg-white hover:bg-[var(--color-surface-200)] text-[var(--color-text-primary)] border border-[var(--border-subtle-color)] rounded-xl font-semibold text-base transition-all duration-300 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-medium)]"
+					>
+						Nuestros Servicios
+					</a>
+				</div>
+			</div>
+
+			<!-- Right Column: Hero Image Estática con Bounce -->
+			<div class="relative hero-image w-full -mt-8 lg:-mt-12">
+				<div id="hero-image-container" class="relative w-full h-[500px] lg:h-[600px] overflow-visible flex items-start justify-center">
+					<img 
+						src="/pets.jpg" 
+						alt="Mascota feliz - Clínica Veterinaria" 
+						class="hero-static-image w-full h-full object-contain"
+						loading="eager"
+					/>
+				</div>
+				<!-- Decorative elements minimalistas -->
+				<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-[var(--color-primary)]/10 rounded-full blur-3xl -z-10"></div>
+				<div class="absolute -top-6 -left-6 w-40 h-40 bg-[var(--color-secondary)]/5 rounded-full blur-3xl -z-10"></div>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+<script>
+	import { gsap } from 'gsap';
+
+	function initHeroBounce() {
+		const heroImage = document.querySelector('.hero-static-image');
+		if (!heroImage) return;
+
+		// Efecto bounce suave y continuo
+		gsap.to(heroImage, {
+			y: -20,
+			duration: 2,
+			ease: 'power1.inOut',
+			repeat: -1,
+			yoyo: true,
+		});
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initHeroBounce);
+	} else {
+		setTimeout(initHeroBounce, 100);
+	}
+</script>
+
+<style>
+	.hero-static-image {
+		will-change: transform;
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		image-rendering: -webkit-optimize-contrast;
+		image-rendering: crisp-edges;
+		image-rendering: high-quality;
+		-webkit-font-smoothing: antialiased;
+	}
+	
+	#hero-image-container {
+		background: transparent;
+		border: none;
+		box-shadow: none;
+	}
+</style>
